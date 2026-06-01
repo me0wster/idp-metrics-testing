@@ -1,0 +1,18 @@
+# Matches Insights classification rule: pipelineName ~ deploy-to-production
+# (Used when CI/CD ingestion is enabled; documents expected deploy workflow name.)
+
+name: deploy-to-production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to production
+        run: echo "Simulated production deploy for metrics testing"
