@@ -1,0 +1,7 @@
+{
+  "name": "idp-metrics-testing",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Fixture repository for IDP Development Insights metrics verification",
+  "scripts": { "test": "node --test src/index.test.js" }
+}
